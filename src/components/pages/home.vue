@@ -1,12 +1,17 @@
 <template lang="html">
   <section>
-    home
+    <mv-footer/>
   </section>
 </template>
 
 <script>
+  import footer from '../project/footer'
+
   export default {
-    name: 'mv-home'
+    name: 'mv-home',
+    components: {
+      'mv-footer': footer
+    }
   }
 </script>
 
