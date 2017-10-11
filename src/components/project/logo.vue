@@ -1,6 +1,6 @@
 <template lang="html">
   <h3 :class="$style.logo">
-    <mv-link v-if="type === 'external'" :url="url" :title="text" :klass="not-styled">
+    <mv-link v-if="type === 'external'" :url="url" :title="text" klass="not-styled">
       <mv-text-flip :text="text"></mv-text-flip>
     </mv-link>
     <router-link v-else :to="url" :class="$style.link">
