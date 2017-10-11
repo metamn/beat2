@@ -1,23 +1,32 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div id="app" :class="$style.app">
     <router-view/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  // Normalize.css
+  // - from https://github.com/necolas/normalize.css/
+  import 'normalize.css'
+
+  // Loading webfonts
+  import fonts from './components/framework/fonts'
+
+  export default {
+    name: 'app',
+    components: {
+      'mv-fonts': fonts
+    }
+  }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style module>
+  .app {
+    composes: default from './components/framework/text-style.css';
+  }
+</style>
+
+<style lang="scss">
+  // A global css reset applied upon normalize.css
+  @import "./components/framework/reset";
 </style>

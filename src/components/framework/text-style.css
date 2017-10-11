@@ -1,0 +1,10 @@
+.default {
+  composes: default from './fonts.css';
+  composes: default from './scale.css';
+  composes: default from './colors.css';
+}
+
+.logo {
+  composes: logo from './fonts.css';
+  display: inline-flex;
+}

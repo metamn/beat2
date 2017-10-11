@@ -1,0 +1,8 @@
+@value white: white;
+@value black: black;
+@value link: black;
+
+.default {
+  color: black;
+  background-color: white;
+}

@@ -4,6 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// Lazyload for images and components
+// - https://github.com/hilongjw/vue-lazyload
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
