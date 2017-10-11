@@ -8,3 +8,7 @@
   composes: logo from './fonts.css';
   display: inline-flex;
 }
+
+.link {
+  composes: default from './colors.css';
+}
