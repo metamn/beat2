@@ -3,7 +3,7 @@
     <mv-link v-if="type === 'external'" :url="url" :title="text" :klass="not-styled">
       <mv-text-flip :text="text"></mv-text-flip>
     </mv-link>
-    <router-link v-else :to="{ name: 'url'}" :class="$style.link">
+    <router-link v-else :to="url" :class="$style.link">
       <mv-text-flip :text="text"></mv-text-flip>
     </router-link>
   </h3>
