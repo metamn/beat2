@@ -4,6 +4,7 @@
   composes: default from './fonts.css';
   composes: default from './scale.css';
   composes: default from './colors.css';
+  letter-spacing: 1.1px;
 }
 
 .logo {

@@ -7,8 +7,7 @@
 <script>
   // Normalize.css
   // - from https://github.com/necolas/normalize.css/
-  // - unfortunately it overwrites all CSS modules definitions
-  // import 'normalize.css'
+  import 'normalize.css'
 
   // Loading webfonts
   import fonts from './components/framework/fonts'
