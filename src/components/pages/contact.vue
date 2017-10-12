@@ -25,8 +25,11 @@
 
 <style module>
   .contact {
+    composes: defaultMargin from '../framework/grid.css';
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
   }
 </style>

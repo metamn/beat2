@@ -19,6 +19,8 @@
 
 <style module>
   .footer {
+    composes: defaultMargin from '../framework/grid.css';
+    
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -33,9 +33,9 @@
     height:608px;
   }
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 767px) {
     .warped {
-      transform: scale(.8) translate(-35%, -25vh);
+      transform: scale(.8) translate(-5%, -25vh);
       max-height: 70vh;
     }
   }

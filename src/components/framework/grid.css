@@ -2,21 +2,21 @@
 @value tablet from './breakpoints.css';
 @value landscape from './breakpoints.css';
 
-.default {
-  margin: lem;
-  min-height: calc(100vh - calc(lem * 2));
+/**
+ * The default padding
+ */
+.defaultMargin {
+  padding: lem;
 }
 
 @media tablet {
-  .default {
-    margin: calc(lem * 2);
-    min-height: calc(100vh - calc(lem * 4));
+  .defaultMargin {
+    padding: calc(lem * 2);
   }
 }
 
 @media landscape {
-  .default {
-    margin: 5vh 10vw;
-    min-height: calc(100vh - 10vh);
+  .defaultMargin {
+    padding: 5vh 10vw;
   }
 }

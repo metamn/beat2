@@ -28,9 +28,6 @@
 <style module>
   .app {
     composes: default from './components/framework/text-style.css';
-    composes: default from './components/framework/grid.css';
-
-    min-height: 100vh;
   }
 </style>
 
