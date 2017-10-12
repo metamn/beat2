@@ -2,7 +2,7 @@
   <aside :class="$style.curvedEmail">
     <h3 hidden>Contact via email</h3>
 
-    <mv-link url="bartus.csongor@gmail.com" title="bartus.csongor@gmail.com" type="email" class="warped">
+    <mv-link url="bartus.csongor@gmail.com" title="bartus.csongor@gmail.com" type="email" :class="[$style.warped, 'warped']">
       <span class='w0'>b</span><span class='w1'>a</span><span class='w2'>r</span><span class='w3'>t</span><span class='w4'>u</span><span class='w5'>s</span><span class='w6'>.</span><span class='w7'>c</span><span class='w8'>s</span><span class='w9'>o</span><span class='w10'>n</span><span class='w11'>g</span><span class='w12'>o</span><span class='w13'>r</span><span class='w14'>@</span><span class='w15'>g</span><span class='w16'>m</span><span class='w17'>a</span><span class='w18'>i</span><span class='w19'>l</span><span class='w20'>.</span><span class='w21'>c</span><span class='w22'>o</span><span class='w23'>m</span>
     </mv-link>
   </aside>
@@ -23,9 +23,7 @@
   .curvedEmail {
     overflow: hidden;
   }
-</style>
 
-<style lang="css">
   .warped {
     position: relative;
     display: block;
@@ -33,13 +31,18 @@
     height:608px;
   }
 
-  @media screen and (max-width: 767px) {
+  /**
+   * Reduce .warped when overflows the screen
+   */
+  @media screen and (max-width: 520px) {
     .warped {
       transform: scale(.8) translate(-5%, -25vh);
       max-height: 70vh;
     }
   }
+</style>
 
+<style lang="css">
   .warped>span[class^=w]:nth-of-type(n+0){display:block; position:absolute;
    -moz-transform-origin:50% 100%; -webkit-transform-origin:50% 100%; -o-transform-origin:50%
    100%; -ms-transform-origin:50% 100%; transform-origin:50% 100%; }
