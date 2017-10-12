@@ -67,11 +67,11 @@
 
   .mcEmbedSignupScrollEmail {
     max-width: calc(25em * 1.333);
+  }
 
-    @media mobile {
-      $paddingOnMobile: calc(lem * 2);
-      width: calc(100% - $paddingOnMobile);
-      background: red;
+  @media mobile {
+    .mcEmbedSignupScrollEmail {
+      width: calc(100% - calc(lem * 2));
     }
   }
 

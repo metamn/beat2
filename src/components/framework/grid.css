@@ -1,0 +1,22 @@
+@value lem from './scale.css';
+@value tablet from './breakpoints.css';
+@value landscape from './breakpoints.css';
+
+.default {
+  margin: lem;
+  min-height: calc(100vh - calc(lem * 2));
+}
+
+@media tablet {
+  .default {
+    margin: calc(lem * 2);
+    min-height: calc(100vh - calc(lem * 4));
+  }
+}
+
+@media landscape {
+  .default {
+    margin: 5vh 10vw;
+    min-height: calc(100vh - 10vh);
+  }
+}
