@@ -5,4 +5,5 @@
 @value portrait: screen and (orientation: portrait);
 @value landscape: screen and (orientation: landscape);
 @value mobile: screen and (max-width: breakpointMobile);
+@value mobileAndUp: screen and (min-width: calc(breakpointMobile + 1));
 @value tablet: screen and (min-width: calc(breakpointMobile + 1)) and (max-width: breakpointTablet);

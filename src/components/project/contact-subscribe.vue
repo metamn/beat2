@@ -66,7 +66,7 @@
   }
 
   .mcEmbedSignupScrollEmail {
-    max-width: calc(25em * 1.333);
+    width: calc(lem * 20);
   }
 
   @media mobile {

@@ -1,4 +1,12 @@
 @value lem from './scale.css';
+@value mobileAndUp from './breakpoints.css';
+
+@media mobileAndUp {
+  .articleBodyText {
+    composes: light from './fonts.css';
+    composes: large1 from './scale.css';
+  }
+}
 
 .default {
   composes: default from './fonts.css';

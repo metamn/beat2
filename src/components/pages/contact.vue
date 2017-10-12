@@ -26,6 +26,7 @@
 <style module>
   .contact {
     composes: defaultMargin from '../framework/grid.css';
+    composes: articleBodyText from '../framework/text-style.css';
 
     display: flex;
     flex-direction: column;
