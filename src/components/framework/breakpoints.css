@@ -1,0 +1,5 @@
+@value breakpointMobile: 767px;
+@value breakpointTablet: 1024px;
+@value breakpointDesktop: 1600px;
+
+@value mobile: screen and (max-width: breakpointMobile - 0.1);

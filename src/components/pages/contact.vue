@@ -1,15 +1,13 @@
 <template lang="html">
-  <article>
+  <article :class="$style.contact">
     <mv-contact-email/>
     <mv-contact-subscribe/>
-    <mv-footer/>
   </article>
 </template>
 
 <script>
   import contactEmail from '../project/contact-email'
   import contactSubscribe from '../project/contact-subscribe'
-  import footer from '../project/footer'
 
   export default {
     name: 'mv-contact',
@@ -20,8 +18,16 @@
     },
     components: {
       'mv-contact-email': contactEmail,
-      'mv-contact-subscribe': contactSubscribe,
-      'mv-footer': footer
+      'mv-contact-subscribe': contactSubscribe
     }
   }
 </script>
+
+<style module>
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+</style>

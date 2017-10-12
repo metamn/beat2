@@ -1,6 +1,7 @@
 <template>
   <div id="app" :class="$style.app">
     <router-view/>
+    <mv-footer/>
   </div>
 </template>
 
@@ -12,10 +13,14 @@
   // Loading webfonts
   import fonts from './components/framework/fonts'
 
+  // Import footer
+  import footer from './components/project/footer'
+
   export default {
     name: 'app',
     components: {
-      'mv-fonts': fonts
+      'mv-fonts': fonts,
+      'mv-footer': footer
     }
   }
 </script>

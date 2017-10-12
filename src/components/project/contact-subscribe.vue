@@ -36,6 +36,7 @@
 
 <style module>
   @value lem from '../framework/scale.css';
+  @value mobile from '../framework/breakpoints.css';
 
   .contactSubscribe {
     display: flex;
@@ -67,8 +68,10 @@
   .mcEmbedSignupScrollEmail {
     max-width: calc(25em * 1.333);
 
-    @media screen and (max-width: 767px){
-      width: calc(100% - (lem * 2));
+    @media mobile {
+      $paddingOnMobile: calc(lem * 2);
+      width: calc(100% - $paddingOnMobile);
+      background: red;
     }
   }
 
