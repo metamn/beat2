@@ -1,3 +1,5 @@
+@value lem from './scale.css';
+
 .default {
   composes: default from './fonts.css';
   composes: default from './scale.css';
@@ -11,4 +13,13 @@
 
 .link {
   composes: default from './colors.css';
+}
+
+.name {
+  composes: bold from './fonts.css';
+  composes: small1 from './scale.css';
+
+  text-transform: uppercase;
+  letter-spacing: calc(lem / 4);
+  padding: calc(lem / 8) calc(lem / 4);
 }

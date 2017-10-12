@@ -1,9 +1,14 @@
-@value lem: 1.25em;
+@value lem: 1.48em;
 
 .default {
   font-size: 100%;
-  line-height: 1.25;
+  line-height: 1.48;
 }
+
+.small1 {
+  font-size: 0.75em;
+}
+
 
 .large1 {
   font-size: 1.333em;

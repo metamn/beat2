@@ -6,3 +6,8 @@
   color: black;
   background-color: white;
 }
+
+.inverted {
+  color: white;
+  background-color: black;
+}

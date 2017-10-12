@@ -20,6 +20,7 @@ figure a {
   display: block;
 }
 
+/*
 button,
 input[type="submit"] {
   border: none;
@@ -27,6 +28,7 @@ input[type="submit"] {
   padding: 0;
   background-color: transparent;
 }
+*/
 
 // Border box
 * {

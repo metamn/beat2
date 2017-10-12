@@ -1,0 +1,8 @@
+@value lem from './scale.css';
+
+@value normal: 1px solid;
+@value thin: calc(lem / 8) solid;
+
+.normalAll {
+  border: normal;
+}
