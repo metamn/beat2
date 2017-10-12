@@ -28,6 +28,7 @@
 
         style += 'width: calc(' + (this.width / this.chars.length) + ');'
         style += 'height: ' + this.height + ';'
+        style += 'left: calc(' + this.width + ' / 2 );'
         style += 'transform: rotate(' + (360 / this.chars.length * index) + 'deg);'
 
         return style
