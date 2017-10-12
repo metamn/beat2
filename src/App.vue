@@ -28,6 +28,11 @@
 <style module>
   .app {
     composes: default from './components/framework/text-style.css';
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 </style>
 

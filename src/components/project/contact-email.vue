@@ -22,6 +22,7 @@
 <style module>
   .curvedEmail {
     overflow: hidden;
+    max-width: 100%;
   }
 
   .warped {
@@ -36,7 +37,7 @@
    */
   @media screen and (max-width: 520px) {
     .warped {
-      transform: scale(.8) translate(-5%, -25vh);
+      transform: scale(.8) translate(-35%, -35%);
       max-height: 70vh;
     }
   }
