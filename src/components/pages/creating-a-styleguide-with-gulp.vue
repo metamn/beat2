@@ -16,7 +16,9 @@
           date: '2015-05-15',
           categories: ['code'],
           display: [
-            'title-with-link'
+            'title-with-link',
+            'date',
+            'categories'
           ]
         }
       }
