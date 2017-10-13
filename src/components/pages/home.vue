@@ -1,5 +1,6 @@
 <template lang="html">
-  <section>
+  <section :class="$style.articles">
+    <h3 hidden>Articles</h3>
     <mv-contact-artwork/>
   </section>
 </template>
@@ -15,5 +16,8 @@
   }
 </script>
 
-<style lang="css">
+<style module>
+  .articles {
+    composes: defaultMargin from '../framework/grid.css';
+  }
 </style>
