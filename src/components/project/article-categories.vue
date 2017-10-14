@@ -1,5 +1,5 @@
 <template lang="html">
-  <div :class="$style.categories">
+  <div :class="[$style.categories, 'categories']">
     <span v-for="category in categories" :key="category.id" :class="$style.category">
       {{ category }}
     </span>

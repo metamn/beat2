@@ -1,5 +1,5 @@
 <template lang="html">
-  <time>{{ formattedDate }}</time>
+  <time class="date">{{ formattedDate }}</time>
 </template>
 
 <script>
@@ -22,4 +22,7 @@
 </script>
 
 <style lang="css">
+  .date {
+    order: -1;
+  }
 </style>

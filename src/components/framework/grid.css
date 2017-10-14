@@ -2,6 +2,26 @@
 @value tablet from './breakpoints.css';
 @value landscape from './breakpoints.css';
 
+
+/**
+ * The article padding
+ */
+.articleMargin {
+  padding: lem;
+}
+
+@media tablet {
+  .articleMargin {
+    padding: calc(lem * 2);
+  }
+}
+
+@media landscape {
+  .articleMargin {
+    padding: 5vh 5vw;
+  }
+}
+
 /**
  * The default padding
  */

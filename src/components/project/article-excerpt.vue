@@ -1,5 +1,5 @@
 <template lang="html">
-  <div :class="$style.excerpt">
+  <div :class="[$style.excerpt, 'excerpt']">
     {{ excerpt }}
   </div>
 </template>
@@ -14,7 +14,17 @@
 </script>
 
 <style module>
+  @value lem from '../framework/scale.css';
+  @value landscape from '../framework/breakpoints.css';
+
   .excerpt {
-    composes: bodyText from '../framework/text-style.css'
+    composes: bodyText from '../framework/text-style.css';
+    padding-top: lem;
+  }
+
+  @media landscape {
+    .excerpt {
+      padding-bottom: lem;
+    }
   }
 </style>

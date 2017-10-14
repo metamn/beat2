@@ -22,5 +22,8 @@
 <style module>
   .articles {
     composes: defaultMargin from '../framework/grid.css';
+
+    display: flex;
+    flex-wrap: wrap;
   }
 </style>

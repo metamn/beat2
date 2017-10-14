@@ -2,10 +2,12 @@
   <article :class="$style.contactArtwork">
     <h3 hidden>Contact artwork</h3>
 
-    <router-link :to="{ name: 'Contact' }">
-      <mv-text-around-circle :class="$style.textAroundCircle" text="• Follow • Contact" width="12.5em" height="12.5em"/>
-      <mv-image :class="$style.image" :image="image"/>
-    </router-link>
+    <div :class="$style.container">
+      <router-link :to="{ name: 'Contact' }">
+        <mv-text-around-circle :class="$style.textAroundCircle" text="• Follow • Contact" width="12.5em" height="12.5em"/>
+        <mv-image :class="$style.image" :image="image"/>
+      </router-link>
+    </div>
   </article>
 </template>
 
@@ -32,6 +34,13 @@
 
 <style module>
   .contactArtwork {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
     position: relative;
     width: 12.5em;
     height: 12.5em;
