@@ -1,9 +1,14 @@
 <template lang="html">
-  <mv-article :article="article" :display="display" />
+  <mv-article :article="article" :display="display">
+    <vue-markdown>
+      this *IS* ins
+    </vue-markdown>
+  </mv-article>
 </template>
 
 <script>
   import article from '../project/article'
+  import VueMarkdown from 'vue-markdown'
 
   export default {
     name: 'mv-creating-a-styleguide-with-gulp',
@@ -22,13 +27,11 @@
       }
     },
     components: {
-      'mv-article': article
+      'mv-article': article,
+      'vue-markdown': VueMarkdown
     }
   }
 </script>
 
 <style module>
-  .creating-a-styleguide-with-gulp {
-    background: red;
-  }
 </style>

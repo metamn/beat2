@@ -4,6 +4,7 @@
     <mv-article-date v-if="display.includes('date')" :date="article.date" :display="display" />
     <mv-article-categories v-if="display.includes('categories')" :categories="article.categories" :display="display" />
     <mv-article-excerpt v-if="display.includes('excerpt')" :excerpt="article.excerpt" />
+    <slot></slot>
   </article>
 </template>
 
