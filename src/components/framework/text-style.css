@@ -32,3 +32,21 @@
   letter-spacing: calc(lem / 4);
   padding: calc(lem / 8) calc(lem / 4);
 }
+
+.title {
+  composes: default from './fonts.css';
+  text-transform: uppercase;
+  letter-spacing: lem;
+  line-height: 2.96;
+}
+
+.linkLinethrough {
+  text-decoration: line-through;
+  composes: default from './colors.css';
+}
+
+.linkLinethrough:hover,
+.linkLinethrough:focus,
+.linkLinethrough:active {
+  text-decoration: none;
+}
