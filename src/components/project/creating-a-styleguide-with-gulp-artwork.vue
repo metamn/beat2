@@ -1,5 +1,7 @@
 <template lang="html">
-  <mv-creating-a-styleguide-with-gulp :display="display" />
+  <div :class="$style.container">
+    <mv-creating-a-styleguide-with-gulp :display="display" />
+  </div>
 </template>
 
 <script>
@@ -10,6 +12,7 @@
     data: function () {
       return {
         display: [
+          'asThumb',
           'title-with-link',
           'date',
           'categories',
@@ -23,11 +26,12 @@
   }
 </script>
 
-<style lang="scss">
-  @import '../framework/scale.scss';
-
-  .creating-a-styleguide-with-gulp {
-    width: calc(50% - #{$lem * 2} - 2px);
-    margin-right: $lem * 2;
+<style lang="scss"module>
+  .container {
+    composes: articleThumbBottomMargin from '../framework/grid.css';
+    composes: normalAll from '../framework/border.css';
+    composes: articlePadding from '../framework/grid.css';
+    composes: articleThumbSize from '../framework/grid.css';
+    composes: articleThumbRightMargin from '../framework/grid.css';
   }
 </style>

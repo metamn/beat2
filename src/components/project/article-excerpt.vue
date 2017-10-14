@@ -1,5 +1,5 @@
 <template lang="html">
-  <div :class="[$style.excerpt, 'excerpt']">
+  <div :class="$style.excerpt">
     {{ excerpt }}
   </div>
 </template>

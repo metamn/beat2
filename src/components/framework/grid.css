@@ -3,21 +3,55 @@
 @value landscape from './breakpoints.css';
 
 
+
+
+
+/**
+ * Add a right margin for an article thumb
+ */
+@media landscape {
+  .articleThumbRightMargin {
+    margin-right: calc(lem * 2);
+  }
+}
+
+/**
+ * Article thumb size
+ */
+ @media portrait {
+   .articleThumbSize {
+     width: 100%;
+   }
+ }
+
+@media landscape {
+  .articleThumbSize {
+    width: calc(50% - calc(lem * 2));
+  }
+}
+
+/**
+ * The grid for an article thumb
+ */
+.articleThumbBottomMargin {
+  margin-bottom: calc(lem * 2);
+}
+
 /**
  * The article padding
  */
-.articleMargin {
+.articlePadding {
   padding: lem;
 }
 
 @media tablet {
-  .articleMargin {
+  .articlePadding {
     padding: calc(lem * 2);
   }
 }
 
 @media landscape {
-  .articleMargin {
+  .articlePadding {
     padding: 5vh 5vw;
   }
 }

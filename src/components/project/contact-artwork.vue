@@ -34,7 +34,8 @@
 
 <style module>
   .contactArtwork {
-    width: 50%;
+    composes: articleThumbSize from '../framework/grid.css';
+    
     display: flex;
     justify-content: center;
     align-items: center;

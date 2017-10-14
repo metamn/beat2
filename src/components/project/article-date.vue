@@ -1,12 +1,13 @@
 <template lang="html">
-  <time class="date">{{ formattedDate }}</time>
+  <time :class="computedClass">{{ formattedDate }}</time>
 </template>
 
 <script>
   export default {
     name: 'mv-article-date',
     props: {
-      date: String
+      date: String,
+      display: Array
     },
     computed: {
       formattedDate () {
@@ -16,13 +17,16 @@
           day: 'numeric'
         }
         return new Date(this.date).toLocaleString('en-US', options)
+      },
+      computedClass () {
+        return (this.display.includes('asThumb')) ? this.$style.thumb : this.$style.default
       }
     }
   }
 </script>
 
-<style lang="css">
-  .date {
+<style module>
+  .thumb {
     order: -1;
   }
 </style>

@@ -1,8 +1,8 @@
 <template lang="html">
   <article :class="computedClass">
     <mv-article-title :article="article" :display="display" />
-    <mv-article-date v-if="display.includes('date')" :date="article.date" />
-    <mv-article-categories v-if="display.includes('categories')" :categories="article.categories" />
+    <mv-article-date v-if="display.includes('date')" :date="article.date" :display="display" />
+    <mv-article-categories v-if="display.includes('categories')" :categories="article.categories" :display="display" />
     <mv-article-excerpt v-if="display.includes('excerpt')" :excerpt="article.excerpt" />
   </article>
 </template>
@@ -31,26 +31,16 @@
     },
     computed: {
       computedClass () {
-        return (this.display !== null) ? [this.$style.thumb, this.article.slug] : [this.$style.default, this.article.slug]
+        return (this.display.includes('asThumb')) ? this.$style.thumb : this.$style.default
       }
     }
   }
 </script>
 
 <style module>
-  @value lem from '../framework/scale.css';
-
   .thumb {
-    composes: normalAll from '../framework/border.css';
-    composes: articleMargin from '../framework/grid.css';
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-bottom: calc(lem * 2);
-  }
-
-  .default {
-    display: flex;
   }
 </style>
