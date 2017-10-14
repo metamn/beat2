@@ -6,7 +6,7 @@
   import article from '../project/article'
 
   export default {
-    name: 'mv-styleguide-with-gulp',
+    name: 'mv-creating-a-styleguide-with-gulp',
     data: function () {
       return {
         article: {
@@ -18,7 +18,8 @@
           display: [
             'title-with-link',
             'date',
-            'categories'
+            'categories',
+            'excerpt'
           ]
         }
       }
