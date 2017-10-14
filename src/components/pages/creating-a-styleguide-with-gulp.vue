@@ -6,14 +6,13 @@
     Why? There is no such thing like a universal plugin  to create a styleguide, and, there is no consensus on what goes into a styleguide.
 
     Everybody rolls her own.
-    The most well known styleguides today are Google’s Material Design <sup id="footnote--1">[1](#footnotes--1)</sup>,
-    Lonely Planet’s Rizzo <sup id="footnote--2">[2](#footnotes--2)</sup>, and Pattern Lab / Atomic Design <sup id="footnote--3">[3](#footnotes--3)</sup> .
+    The most well known styleguides today are Google’s Material Design <sup id="footnote--1">[1](#footnotes--1)</sup>, Lonely Planet’s Rizzo <sup id="footnote--2">[2](#footnotes--2)</sup>, and Pattern Lab / Atomic Design <sup id="footnote--3">[3](#footnotes--3)</sup> .
     All unique in design, content and the tools behind creating them.
 
     If you check out [styleguides.io](http://styleguides.io/) you'll find dozens of tools & ways to create a styleguide.
     It's overhelming. You don't know where to start, which one to choose to have a future-proof solution.
 
-    Never mind. This article will help you understand how styleguides work and how you can roll your own with a small effort.
+    Never mind. This article will help you understand how styleguides work and how you can roll your own swith a small effort.
 
     ## Styleguide for whom?
 
@@ -48,18 +47,18 @@
     > ... creating a component layer which both our user-facing applications and our Style Guide can work from.
 
     In other words there is a need for a database to store all user interface parameters. Both the site and the styleguide uses this database to build the interface. Changes go to this database and are automatically propagated to both the site and the styleguide.
-  </vue-markdown>
+    </vue-markdown>
 
-  <mv-image :class="$style.image" :image="article.images[0]"/>
+    <mv-image :class="$style.image" :image="article.images[0]"/>
 
-  <vue-markdown>
+    <vue-markdown>
     Since the styleguide architecture is so simple we can implement with our existing front-end tools.
     The database can be a JSON file, Gulp / Grunt / etc. can be the glue engine to sync the database with the front-end code.
-  </vue-markdown>
+    </vue-markdown>
 
-  <mv-image :class="$style.image" :image="article.images[1]"/>
+    <mv-image :class="$style.image" :image="article.images[1]"/>
 
-  <vue-markdown>
+    <vue-markdown>
     The rules are simple:
 
     1. Every user interface definition goes into a JSON file
@@ -75,9 +74,91 @@
 
     First we will need a JSON file to define the colors:
 
+    ```
+    {
+      "colors": [
+        {
+          "name": "white",
+          "value": "#f1f1f1",
+          "description": "The background color"
+        },
+        {
+          "name": "black",
+          "value": "#003A40",
+          "description": "The text color"
+        },
+        {
+          "name": "blue",
+          "value": "rgba(0, 0, 255, 1)",
+          "description": "The highlight color"
+        },
+        {
+          "name": "thumbblue",
+          "value": "rgba(38, 38, 255, 1)",
+          "description": "A lighter highlight color"
+        }
+      ]
+    }
+    ```
+
     Then we will have to covert this data into CSS using Gulp and Swig, a tool coming with Gulp and used to generate HTML, CSS or JS.
 
+    ```
+    ....
+    ```
+
     After conversion we will have a complete SCSS file, generated from the database, which otherwise would be written by hand by front-end developers.
+
+    ```scss
+    // The background color
+    $white: #f1f1f1;
+
+    // The text color
+    $black: #003A40;
+
+    // The highlight color
+    $blue: rgba(0, 0, 255, 1);
+
+    // A lighter highlight color
+    $thumbblue: rgba(38, 38, 255, 1);
+
+
+    // Color combinations. Colors are not used standalone but in pairs
+    @mixin colors($name) {
+      @if ($name == 'white-on-blue') {
+        color: $white;
+        background-color: $blue;
+      }
+
+      @if ($name == 'white-on-thumbblue') {
+        color: $white;
+        background-color: $thumbblue;
+      }
+
+      @if ($name == 'blue-on-white') {
+        color: $blue;
+        background-color: $white;
+      }
+    }
+
+
+    // Color classes
+    .white {
+      background: #f1f1f1;
+    };
+
+    .black {
+      background: #003A40;
+    };
+
+    .blue {
+      background: rgba(0, 0, 255, 1);
+    };
+
+    .thumbblue {
+      background: rgba(38, 38, 255, 1);
+    };
+    ```
 
     The most important part of the process above is that we *define data* instead of *writing code*.
     This makes sure data will be the same both for the site and the styleguide and there won't be human mistakes.
@@ -95,11 +176,11 @@
     The example below is the styleguide entry for colors. It's a HTML skeleton code displaying which colors are used to build the site. The code is independent of the colors it displays. Colors can change, new ones can be added or others removed. This code's outcome is only defined by JSON data.
 
     Gulp transforms the skeleton into a final HTML which contains the same colors as defined in the `colors.scss.json` file above.
-  </vue-markdown>
+    </vue-markdown>
 
-  <mv-image :class="$style.image" :image="article.images[2]"/>
+    <mv-image :class="$style.image" :image="article.images[2]"/>
 
-  <vue-markdown>
+    <vue-markdown>
     ## See live, comment, contribute
 
     My portfolio features a complete, living styleguide built on these principles and technologies.
