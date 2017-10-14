@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div :class="$style.excerpt">
     {{ excerpt }}
   </div>
 </template>
@@ -13,5 +13,8 @@
   }
 </script>
 
-<style lang="css">
+<style module>
+  .excerpt {
+    composes: bodyText from '../framework/text-style.css'
+  }
 </style>

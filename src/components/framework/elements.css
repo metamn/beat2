@@ -1,0 +1,9 @@
+@value lem from './scale.css';
+
+p {
+  word-wrap: break-word;
+}
+
+p + p {
+  margin-top: lem;
+}

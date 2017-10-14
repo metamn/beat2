@@ -1,6 +1,13 @@
 @value lem from './scale.css';
 @value mobileAndUp from './breakpoints.css';
 
+@value bodyTextWidth: calc(lem * 20);
+
+.bodyText {
+  max-width: bodyTextWidth;
+  composes: p from './elements.css';
+}
+
 @media mobileAndUp {
   .articleBodyText {
     composes: light from './fonts.css';
