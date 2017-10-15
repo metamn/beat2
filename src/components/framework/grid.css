@@ -18,10 +18,8 @@
 /**
  * Article thumb size
  */
- @media portrait {
-   .articleThumbSize {
-     width: 100%;
-   }
+ .articleThumbSize {
+   width: 100%;
  }
 
 @media landscape {

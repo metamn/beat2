@@ -42,9 +42,13 @@
 
 .title {
   composes: default from './fonts.css';
+
   text-transform: uppercase;
-  letter-spacing: lem;
+  letter-spacing: calc(lem / 1.5);
   line-height: 2.96;
+
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .linkLinethrough {
