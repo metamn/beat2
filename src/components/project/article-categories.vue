@@ -1,8 +1,6 @@
 <template lang="html">
-  <div :class="[$style.categories, 'categories']">
-    <span v-for="category in categories" :key="category.id" :class="$style.category">
-      {{ category }}
-    </span>
+  <div :class="$style.categories">
+    {{ categoriesToString }}
   </div>
 </template>
 
@@ -11,12 +9,18 @@
     name: 'mv-article-categories',
     props: {
       categories: Array
+    },
+    computed: {
+      categoriesToString () {
+        return this.categories.join(',')
+      }
     }
   }
 </script>
 
 <style module>
-  .category {
+  .categories {
+    display: inline-table;
     composes: inverted from '../framework/colors.css';
   }
 </style>

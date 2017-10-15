@@ -1,6 +1,6 @@
 <template lang="html">
   <div :class="$style.container">
-    <mv-creating-a-styleguide-with-gulp :display="display" />
+    <mv-creating-a-styleguide-with-gulp :displayAsThumb="true" />
   </div>
 </template>
 
@@ -9,17 +9,6 @@
 
   export default {
     name: 'mv-creating-a-styleguide-with-gulp-artwork',
-    data: function () {
-      return {
-        display: [
-          'asThumb',
-          'title-with-link',
-          'date',
-          'categories',
-          'excerpt'
-        ]
-      }
-    },
     components: {
       'mv-creating-a-styleguide-with-gulp': creatingAStyleguideWithGulp
     }

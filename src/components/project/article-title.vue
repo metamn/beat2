@@ -1,5 +1,5 @@
 <template lang="html">
-  <h3 v-if="display.includes('title-with-link')" :class="$style.title">
+  <h3 v-if="article.display.includes('title-with-link')" :class="$style.title">
     <router-link :to="{ path: article.slug }" :class="$style.link">{{ article.title }}</router-link>
   </h3>
   <h3 v-else :class="$style.title">{{ article.title }}</h3>
@@ -9,12 +9,7 @@
   export default {
     name: 'mv-article-title',
     props: {
-      article: {
-        type: Object
-      },
-      display: {
-        type: Array
-      }
+      article: Object
     }
   }
 </script>

@@ -7,7 +7,7 @@
     name: 'mv-article-date',
     props: {
       date: String,
-      display: Array
+      displayAsThumb: Boolean
     },
     computed: {
       formattedDate () {
@@ -19,7 +19,7 @@
         return new Date(this.date).toLocaleString('en-US', options)
       },
       computedClass () {
-        return (this.display.includes('asThumb')) ? this.$style.thumb : this.$style.default
+        return (this.displayAsThumb) ? this.$style.thumb : this.$style.default
       }
     }
   }

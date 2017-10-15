@@ -1,9 +1,9 @@
 <template lang="html">
   <article :class="computedClass">
-    <mv-article-title :article="article" :display="display" />
-    <mv-article-date v-if="display.includes('date')" :date="article.date" :display="display" />
-    <mv-article-categories v-if="display.includes('categories')" :categories="article.categories" :display="display" />
-    <mv-article-excerpt v-if="display.includes('excerpt')" :excerpt="article.excerpt" />
+    <mv-article-title :article="article" />
+    <mv-article-date v-if="article.display.includes('date')" :date="article.date" :displayAsThumb="displayAsThumb" />
+    <mv-article-categories v-if="article.display.includes('categories')" :categories="article.categories"/>
+    <mv-article-excerpt v-if="article.display.includes('excerpt')" :excerpt="article.excerpt" />
     <slot></slot>
   </article>
 </template>
@@ -17,12 +17,8 @@
   export default {
     name: 'mv-article',
     props: {
-      article: {
-        type: Object
-      },
-      display: {
-        type: Array
-      }
+      article: Object,
+      displayAsThumb: Boolean
     },
     components: {
       'mv-article-title': articleTitle,
@@ -32,7 +28,7 @@
     },
     computed: {
       computedClass () {
-        return (this.display.includes('asThumb')) ? this.$style.thumb : this.$style.default
+        return (this.displayAsThumb) ? this.$style.thumb : this.$style.default
       }
     }
   }
