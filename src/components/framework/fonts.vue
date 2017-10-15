@@ -5,7 +5,7 @@
 
   WebFont.load({
     typekit: {
-      id: 'wrb3hlx'
+      id: 'syb1owt'
     }
   })
 

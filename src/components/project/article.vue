@@ -3,8 +3,10 @@
     <mv-article-title :article="article" />
     <mv-article-date v-if="article.display.includes('date')" :date="article.date" :displayAsThumb="displayAsThumb" />
     <mv-article-categories v-if="article.display.includes('categories')" :categories="article.categories"/>
-    <mv-article-excerpt v-if="article.display.includes('excerpt')" :excerpt="article.excerpt" />
-    <slot></slot>
+    <mv-article-excerpt v-if="article.display.includes('excerpt') && displayAsThumb" :excerpt="article.excerpt" />
+    <div :class="$style.slot">
+      <slot></slot>
+    </div>
   </article>
 </template>
 
@@ -39,5 +41,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+
+  .default {
+    composes: articlePadding from '../framework/grid.css';
+  }
+
+  .slot {
+    composes: articleBodyText from '../framework/text-style.css';
   }
 </style>
