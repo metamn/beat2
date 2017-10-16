@@ -1,5 +1,5 @@
 <template lang="html">
-  <img v-lazy="image.src" :data-srcset="image.srcset" :alt="image.title">
+  <img :class="$style.image" v-lazy="image.src" :data-srcset="image.srcset" :alt="image.title">
 </template>
 
 <script>
@@ -38,11 +38,7 @@
 </script>
 
 <style module scoped>
-  img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border: 0 none;
+  .image {
+    
   }
 </style>

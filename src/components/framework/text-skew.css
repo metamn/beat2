@@ -1,0 +1,10 @@
+@value lem from './scale.css';
+
+.textSkew {
+  composes: default from './colors.css';
+  composes: thinAll from './border.css';
+  transform: skew(5deg);
+  padding: lem;
+  margin-top: lem;
+  margin-bottom: lem;
+}

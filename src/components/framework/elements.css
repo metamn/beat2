@@ -1,5 +1,12 @@
 @value lem from './scale.css';
 
+.blockquote {
+  composes: default from './fonts.css';
+  composes: large1 from './scale.css';
+  text-align: center;
+  margin: lem 0;
+}
+
 p {
   word-wrap: break-word;
 }

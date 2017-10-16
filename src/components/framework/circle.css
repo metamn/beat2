@@ -1,0 +1,7 @@
+@value lem from './scale.css';
+
+.default {
+  width: calc(lem * 2);
+  height: calc(lem * 2);
+  border-radius: 50%;
+}

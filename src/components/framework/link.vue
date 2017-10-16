@@ -75,6 +75,8 @@
             return this.$style.underlined
           case 'not-styled':
             return this.$style.notStyled
+          case 'body-text':
+            return this.$style.bodyText
           default:
             return this.$style.default
         }
@@ -97,5 +99,11 @@
   .notStyled {
     composes: default from './colors.css';
     text-decoration: none;
+  }
+
+  .bodyText {
+    composes: default from './colors.css';
+    composes: default from './fonts.css';
+    text-decoration: underline;
   }
 </style>
