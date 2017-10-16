@@ -7,7 +7,6 @@
 <script>
   import article from '../project/article'
   import markdown from './creating-a-styleguide-with-gulp.md'
-  import image from '../framework/image'
 
   export default {
     name: 'mv-creating-a-styleguide-with-gulp',
@@ -53,7 +52,6 @@
     },
     components: {
       'mv-article': article,
-      'mv-image': image,
       'markdown': markdown
     }
   }
