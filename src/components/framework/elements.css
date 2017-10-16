@@ -7,18 +7,3 @@ p {
 p + p {
   margin-top: lem;
 }
-
-h2 {
-  composes: title from './text-style';
-  margin: lem 0;
-}
-
-h3 {
-  composes: title from './text-style';
-  margin-top: lem;
-}
-
-a {
-  composes: default from './colors.css';
-  composes: default from './fonts';
-}

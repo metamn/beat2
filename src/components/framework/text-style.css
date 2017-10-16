@@ -12,9 +12,6 @@
   composes: light from './fonts.css';
   composes: large1 from './scale.css';
   composes: p from './elements.css';
-  composes: h2 from './elements.css';
-  composes: h3 from './elements.css';
-  composes: a from './elements.css';
 }
 
 .default {

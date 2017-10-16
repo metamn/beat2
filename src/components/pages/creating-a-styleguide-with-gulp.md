@@ -45,10 +45,7 @@ The theory behind maintainable styleguides is [Component API](http://ianfeather.
 
 In other words there is a need for a database to store all user interface parameters. Both the site and the styleguide uses this database to build the interface. Changes go to this database and are automatically propagated to both the site and the styleguide.
 
-<figure>
-  <img src="/static/images/styleguide-architecture_tablet.png" srcset="/static/images/styleguide-architecture_mobile.png 420w, /static/images/styleguide-architecture_tablet.png 768w, /static/images/styleguide-architecture.png 1536w" alt="Styleguide architecture">
-  <figcaption>Styleguide architecture</figcaption>
-</figure>
+![Styleguide architecture](/static/images/styleguide-architecture_tablet.png)
 
 
 Since the styleguide architecture is so simple we can implement with our existing front-end tools.
