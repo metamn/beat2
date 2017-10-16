@@ -3,6 +3,18 @@
     <mv-link :url="author.url" :title="author.name">
       <mv-image :image="image" />
     </mv-link>
+
+    <mv-link :url="author.url" :title="author.name">
+      {{ author.name }}
+    </mv-link>
+
+    <div :class="$style.title">
+      {{ author.title }}
+    </div>
+
+    <div :class="$style.description">
+      <blockquote v-html="author.description" />
+    </div>
   </div>
 </template>
 
@@ -32,6 +44,14 @@
 
 <style module>
   .author {
+
+  }
+
+  .title {
+
+  }
+
+  .description {
 
   }
 </style>
