@@ -24,7 +24,7 @@
 
 @media landscape {
   .articleThumbSize {
-    width: calc(50% - calc(lem * 2));
+    width: calc((100% - calc(lem * 2)) / 2);
   }
 }
 

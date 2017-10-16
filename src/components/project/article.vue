@@ -4,6 +4,7 @@
     <mv-article-date v-if="article.display.includes('date')" :date="article.date" :displayAsThumb="displayAsThumb" />
     <mv-article-categories v-if="article.display.includes('categories')" :categories="article.categories"/>
     <mv-article-excerpt v-if="article.display.includes('excerpt') && displayAsThumb" :excerpt="article.excerpt" />
+    <mv-article-authors v-if="article.display.includes('authors')" :authors="article.authors"/>
     <div :class="$style.slot">
       <slot></slot>
     </div>
@@ -15,6 +16,7 @@
   import articleDate from './article-date'
   import articleCategories from './article-categories'
   import articleExcerpt from './article-excerpt'
+  import articleAuthors from './article-authors'
 
   export default {
     name: 'mv-article',
@@ -26,7 +28,8 @@
       'mv-article-title': articleTitle,
       'mv-article-date': articleDate,
       'mv-article-categories': articleCategories,
-      'mv-article-excerpt': articleExcerpt
+      'mv-article-excerpt': articleExcerpt,
+      'mv-article-authors': articleAuthors
     },
     computed: {
       computedClass () {
