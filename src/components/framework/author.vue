@@ -1,7 +1,7 @@
 <template lang="html">
   <div :class="$style.author">
     <mv-link :url="author.url" :title="author.name">
-      <mv-image :src="author.avatar" :title="author.name"/>
+      <mv-image :image="image" />
     </mv-link>
   </div>
 </template>
@@ -15,6 +15,14 @@
     props: {
       author: Object
     },
+    data: function () {
+      return {
+        image: {
+          src: this.author.avatar,
+          title: this.author.name
+        }
+      }
+    },
     components: {
       'mv-link': link,
       'mv-image': image
@@ -24,6 +32,6 @@
 
 <style module>
   .author {
-    
+
   }
 </style>
