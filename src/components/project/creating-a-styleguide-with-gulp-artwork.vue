@@ -15,7 +15,7 @@
   }
 </script>
 
-<style lang="scss"module>
+<style module>
   .container {
     composes: articleThumbBottomMargin from '../framework/grid.css';
     composes: normalAll from '../framework/border.css';

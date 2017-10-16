@@ -4,6 +4,7 @@ import home from '@/components/pages/home'
 import contact from '@/components/pages/contact'
 import styleguideWithGulp from '@/components/pages/creating-a-styleguide-with-gulp'
 import deliveringTheMessage from '@/components/pages/delivering-the-message'
+import noProblemsFrontend from '@/components/pages/no-more-problems-on-the-front-end'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/delivering-the-message',
       name: 'deliveringTheMessage',
       component: deliveringTheMessage
+    },
+    {
+      path: '/no-more-problems-on-the-front-end',
+      name: 'noProblemsFrontend',
+      component: noProblemsFrontend
     }
   ]
 })

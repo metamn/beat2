@@ -1,16 +1,16 @@
 <template lang="html">
   <div :class="$style.container">
-    <mv-delivering-the-message :displayAsThumb="true" />
+    <mv-no-more-problems-on-the-front-end :displayAsThumb="true" />
   </div>
 </template>
 
 <script>
-  import deliveringTheMessage from '../pages/delivering-the-message'
+  import noProblemsFrontend from '../pages/no-more-problems-on-the-front-end'
 
   export default {
-    name: 'mv-delivering-the-message-artwork',
+    name: 'mv-no-more-problems-on-the-front-end-artwork',
     components: {
-      'mv-delivering-the-message': deliveringTheMessage
+      'mv-no-more-problems-on-the-front-end': noProblemsFrontend
     }
   }
 </script>
@@ -21,5 +21,6 @@
     composes: normalAll from '../framework/border.css';
     composes: articlePadding from '../framework/grid.css';
     composes: articleThumbSize from '../framework/grid.css';
+    composes: articleThumbRightMargin from '../framework/grid.css';
   }
 </style>

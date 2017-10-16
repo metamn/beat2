@@ -1,6 +1,7 @@
 <template lang="html">
   <section :class="$style.articles">
     <h3 hidden>Articles</h3>
+    <mv-no-more-problems-on-the-front-end-artwork />
     <mv-delivering-the-message-artwork />
     <mv-creating-a-styleguide-with-gulp-artwork />
     <mv-contact-artwork/>
@@ -11,13 +12,15 @@
   import contactArtwork from '../project/contact-artwork'
   import creatingAStyleguideWithGulpArtwork from '../project/creating-a-styleguide-with-gulp-artwork'
   import deliveringTheMessageArtwork from '../project/delivering-the-message-artwork'
+  import noProblemsFrontendArtwork from '../project/no-more-problems-on-the-front-end-artwork'
 
   export default {
     name: 'mv-home',
     components: {
       'mv-contact-artwork': contactArtwork,
       'mv-creating-a-styleguide-with-gulp-artwork': creatingAStyleguideWithGulpArtwork,
-      'mv-delivering-the-message-artwork': deliveringTheMessageArtwork
+      'mv-delivering-the-message-artwork': deliveringTheMessageArtwork,
+      'mv-no-more-problems-on-the-front-end-artwork': noProblemsFrontendArtwork
     }
   }
 </script>
