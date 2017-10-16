@@ -81,7 +81,8 @@
   .authorDescription {
     composes: textSkew from './text-skew.css';
     order: 1;
-    flex-grow: 7;
+    flex-grow: 5;
+    max-width: calc(lem * 25);
   }
 
   .blockquote {
