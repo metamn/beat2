@@ -1,9 +1,9 @@
-@value breakpointMobile: 767px;
-@value breakpointTablet: 1024px;
-@value breakpointDesktop: 1600px;
-
 @value portrait: screen and (orientation: portrait);
 @value landscape: screen and (orientation: landscape);
-@value mobile: screen and (max-width: breakpointMobile);
-@value mobileAndUp: screen and (min-width: calc(breakpointMobile + 1));
-@value tablet: screen and (min-width: calc(breakpointMobile + 1)) and (max-width: breakpointTablet);
+
+@value mobile: screen and (max-width: 767px);
+@value tablet: screen and (min-width: 768px) and (max-width: 1024px);
+@value tabletAndUp: screen and (min-width: 768px);
+@value laptop: screen and (min-width: 1025px) and (max-width: 1599px);
+@value laptopAndUp: screen and (min-width: 1025px);
+@value desktop: screen and (min-width: 1600px);

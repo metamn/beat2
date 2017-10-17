@@ -1,6 +1,5 @@
 @value lem from './scale.css';
 @value mobileAndUp from './breakpoints.css';
-
 @value bodyTextWidth: calc(lem * 20);
 
 .bodyText {
@@ -59,4 +58,10 @@
 .linkLinethrough:focus,
 .linkLinethrough:active {
   text-decoration: none;
+}
+
+.linkUnderlined {
+  composes: default from './colors.css';
+  composes: default from './fonts.css';
+  text-decoration: underline;
 }

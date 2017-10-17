@@ -1,5 +1,5 @@
 <template lang="html">
-  <a :class="[computedClass, 'link']" :href="computedURL" :title="title"><slot></slot></a>
+  <a :href="computedURL" :title="title"><slot></slot></a>
 </template>
 
 <script>
@@ -26,13 +26,6 @@
       type: {
         type: String,
         default: ''
-      },
-      /**
-       * The style of the url.
-       */
-      klass: {
-        type: String,
-        default: ''
       }
     },
     computed: {
@@ -57,53 +50,11 @@
           default:
             return this.url
         }
-      },
-
-      /**
-       * Style the component
-       *
-       * This seems to be not working, I mean the return is lost somehowin Vue
-       * If I add manually the '$style.default' to :class it works
-       *
-       * @public
-       * @param {String} klass The styles to be added
-       * @return {computedClass} a CSS Module like computed stuff
-       */
-      computedClass () {
-        switch (this.klass) {
-          case 'underlined':
-            return this.$style.underlined
-          case 'not-styled':
-            return this.$style.notStyled
-          case 'body-text':
-            return this.$style.bodyText
-          default:
-            return this.$style.default
-        }
       }
     }
   }
 </script>
 
 <style module>
-  .default {
-    composes: link from './text-style.css';
-    text-decoration: none;
-  }
-
-  .underlined {
-    composes: default;
-    text-decoration: underline;
-  }
-
-  .notStyled {
-    composes: default from './colors.css';
-    text-decoration: none;
-  }
-
-  .bodyText {
-    composes: default from './colors.css';
-    composes: default from './fonts.css';
-    text-decoration: underline;
-  }
+  
 </style>

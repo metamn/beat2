@@ -44,16 +44,40 @@
 </script>
 
 <style module>
-  .person {
+  @value landscape from './breakpoints.css';
+  @value portrait from './breakpoints.css';
+  @value lem from './scale.css';
 
+  .person {
+    display: flex;
+    justify-content: center;
+    align-items: center
   }
 
-  .personAvatar {
+  @media portrait {
+    .person {
+      flex-direction: column;
+    }
 
+    .personAvatar,
+    .personName,
+    .personNameWithLink,
+    .personTitle {
+      margin-bottom: calc(lem / 2);
+    }
+  }
+
+  @media landscape {
+    .personAvatar,
+    .personName,
+    .personNameWithLink,
+    .personTitle {
+      margin-right: calc(lem / 2);
+    }
   }
 
   .personNameWithLink {
-
+    composes: linkUnderlined from './text-style.css';
   }
 
   .personName {
