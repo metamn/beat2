@@ -2,14 +2,14 @@
   <aside :class="$style.authors">
     <h3 hidden>Authors</h3>
 
-    <div v-for="author in authors">
-      <mv-author :author="author" />
+    <div v-for="personWithQuote in authors">
+      <mv-person-with-quote :personWithQuote="personWithQuote" />
     </div>
   </aside>
 </template>
 
 <script>
-  import author from '../framework/author'
+  import personWithQuote from '../framework/person-with-quote'
 
   export default {
     name: 'mv-article-authors',
@@ -17,13 +17,13 @@
       authors: Array
     },
     components: {
-      'mv-author': author
+      'mv-person-with-quote': personWithQuote
     }
   }
 </script>
 
 <style module>
   .authors {
-    
+
   }
 </style>

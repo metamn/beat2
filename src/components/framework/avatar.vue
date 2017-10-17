@@ -1,7 +1,7 @@
 <template lang="html">
   <div :class="$style.avatar">
-    <mv-link :class="$style.avatarLink" :url="avatar.link" :title="avatar.title">
-      <mv-image :class="$style.avatarImage" v-if="avatar.image !== null" :image="avatar.image" />
+    <mv-link :class="$style.avatarLink" :url="avatar.url" :title="avatar.title">
+      <mv-image v-if="avatar.image !== null" :class="$style.avatarImage" :image="avatar.image" />
       <span v-else :class="$style.avatarInitiale">{{ avatar.initiale }}</span>
     </mv-link>
   </div>
