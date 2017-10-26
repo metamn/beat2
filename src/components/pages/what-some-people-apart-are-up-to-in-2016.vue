@@ -97,6 +97,136 @@
                 avatar: '/static/images/vlh.jpg'
               },
               quote: 'Sounds design and Data visualization'
+            },
+            {
+              person: {
+                name: 'Andrew Johnson',
+                title: 'Designer',
+                url: 'http://www.aetherpoint.com',
+                twitter: 'Aetherpoint',
+                avatar: '/static/images/Aetherpoint.jpg'
+              },
+              quote: 'Typography and Game development'
+            },
+            {
+              person: {
+                name: 'Michael Johnson',
+                title: 'Creative director at Happy Cog',
+                url: 'http://happycog.com/',
+                twitter: 'happycog',
+                avatar: '/static/images/happycog.jpg'
+              },
+              quote: 'Use chance to shape an experience (UX)'
+            },
+            {
+              person: {
+                name: 'Gerry McGovern',
+                title: 'Founder of Customer Carewords',
+                url: 'http://www.customercarewords.com/',
+                twitter: 'gerrymcgovern',
+                avatar: '/static/images/gerrymcgovern.jpg'
+              },
+              quote: 'Trust in web design and branding'
+            },
+            {
+              person: {
+                name: 'Cameron Moll',
+                title: 'CEO, Authentic Jobs',
+                url: 'http://twitter.com/cameronmoll',
+                twitter: 'cameronmoll',
+                avatar: '/static/images/cameronmoll.jpg'
+              },
+              quote: 'Unified design && How career impacts personal life'
+            },
+            {
+              person: {
+                name: 'Yesenia Perez-Cruz',
+                title: 'Senior product designer at Vox Media',
+                url: 'http://www.yeseniaperezcruz.com/',
+                twitter: 'yeseniaa',
+                avatar: '/static/images/yeseniaa.jpg'
+              },
+              quote: 'Being more deliberate with my design decisions'
+            },
+            {
+              person: {
+                name: 'Susan Robertson',
+                title: 'Front-end developer',
+                url: 'https://www.susanjeanrobertson.com',
+                twitter: 'susanjrobertson',
+                avatar: '/static/images/susanjrobertson.jpg'
+              },
+              quote: 'Responsive web design'
+            },
+            {
+              person: {
+                name: 'Jen Simmons',
+                title: 'Host and executive producer of The Web Ahead; designer advocate at Mozilla',
+                url: 'http://jensimmons.com',
+                twitter: 'jensimmons',
+                avatar: '/static/images/jensimmons.jpg'
+              },
+              quote: 'New page layouts with CSS Flexbox and Grid'
+            },
+            {
+              person: {
+                name: 'Rian van der Merwe',
+                title: 'Product design director at Jive Software',
+                url: 'http://www.elezea.com',
+                twitter: 'rianvdm',
+                avatar: '/static/images/rianvdm.jpg'
+              },
+              quote: 'Study and explore things on the periphery of design'
+            },
+            {
+              person: {
+                name: 'Jeffrey Zeldman',
+                title: 'Founder of Happy Cog & publisher of A List Apart',
+                url: 'http://zeldman.com',
+                twitter: 'zeldman',
+                avatar: '/static/images/zeldman.jpg'
+              },
+              quote: 'Get back into the hustle and grind of client-facing design'
+            },
+            {
+              person: {
+                name: 'Liz Danzico',
+                title: 'Chair and cofounder of SVA MFA Interaction Design; creative director, NPR',
+                url: 'http://bobulate.com',
+                twitter: 'bobulate',
+                avatar: '/static/images/bobulate.jpg'
+              },
+              quote: 'For the next year, I’m practicing non-motion. No sudden shifts; no pivots; no renovations. Instead: continuity and flow.'
+            },
+            {
+              person: {
+                name: 'Brad Frost',
+                title: 'Web designer',
+                url: 'http://bradfrost.com',
+                twitter: 'brad_frost',
+                avatar: '/static/images/brad_frost.jpg'
+              },
+              quote: 'Death To Bullshit.'
+            },
+            {
+              person: {
+                name: 'Andrew Grimes',
+                title: 'User experience consultant',
+                url: 'http://apgrimes.co.uk/',
+                twitter: 'Andrew_Grimes',
+                avatar: '/static/images/Andrew_Grimes.jpg'
+              },
+              quote: 'Sites that match design with description, and vary layout as often as magazines do.'
+            },
+            {
+              person: {
+                name: 'Lara Hogan',
+                title: 'Senior engineering manager at Etsy',
+                url: 'http://larahogan.me',
+                twitter: 'lara_hogan',
+                avatar: '/static/images/lara_hogan.jpg'
+              },
+              quote: 'Fears about public speaking.'
             }
           ]
         }
