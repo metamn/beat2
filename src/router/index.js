@@ -6,6 +6,7 @@ import styleguideWithGulp from '@/components/pages/creating-a-styleguide-with-gu
 import deliveringTheMessage from '@/components/pages/delivering-the-message'
 import noProblemsFrontend from '@/components/pages/no-more-problems-on-the-front-end'
 import herculean from '@/components/pages/herculean'
+import peopleApart2016 from '@/components/pages/what-some-people-apart-are-up-to-in-2016'
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export default new Router({
       path: '/herculean',
       name: 'herculean',
       component: herculean
+    },
+    {
+      path: '/what-some-people-apart-are-up-to-in-2016',
+      name: 'peopleApart2016',
+      component: peopleApart2016
     }
   ]
 })
