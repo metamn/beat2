@@ -1,15 +1,15 @@
 <template lang="html">
-  <aside :class="$style.authors">
+  <aside class="authors">
     <h3 hidden>Authors</h3>
 
-    <div v-for="personWithQuote in authors">
-      <mv-person-with-quote :personWithQuote="personWithQuote" />
+    <div v-for="author in authors">
+      <mv-person :person="author.person" />
     </div>
   </aside>
 </template>
 
 <script>
-  import personWithQuote from '../framework/person-with-quote'
+  import person from '../framework/person'
 
   export default {
     name: 'mv-article-authors',
@@ -17,7 +17,7 @@
       authors: Array
     },
     components: {
-      'mv-person-with-quote': personWithQuote
+      'mv-person': person
     }
   }
 </script>
