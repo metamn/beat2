@@ -33,3 +33,9 @@
   font-weight: 300;
   font-style: normal;
 }
+
+.lightItalic {
+  font-family: 'nimbus-sans', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}

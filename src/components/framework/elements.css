@@ -1,8 +1,10 @@
 @value lem from './scale.css';
+@value desktop from './breakpoints.css';
 
 .blockquote {
   composes: default from './fonts.css';
   composes: large1 from './scale.css';
+
   text-align: center;
   margin: lem 0;
 }

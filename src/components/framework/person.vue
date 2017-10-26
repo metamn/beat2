@@ -78,13 +78,15 @@
 
   .personNameWithLink {
     composes: linkUnderlined from './text-style.css';
+    composes: large1 from './scale.css';
   }
 
   .personName {
-
+    composes: large1 from './scale.css';
   }
 
   .personTitle {
-
+    composes: default from './colors.css';
+    composes: lightItalic from './fonts.css';
   }
 </style>

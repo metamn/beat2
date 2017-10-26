@@ -19,6 +19,9 @@
 
   .title {
     composes: title from '../framework/text-style.css';
+
+    display: flex;
+    justify-content: center;
     margin-bottom: calc(lem * 2);
   }
 

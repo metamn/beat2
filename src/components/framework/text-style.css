@@ -42,7 +42,7 @@
   composes: default from './fonts.css';
 
   text-transform: uppercase;
-  letter-spacing: calc(lem / 1.5);
+  letter-spacing: lem;
   line-height: 2.96;
 
   width: 100%;
