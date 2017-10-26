@@ -42,10 +42,6 @@
     .personWithQuote {
       flex-wrap: nowrap;
     }
-
-    .quote {
-      margin-right: lem;
-    }
   }
 
   .quote {
@@ -55,5 +51,10 @@
   .blockquote {
     composes: blockquote from './elements.css';
     max-width: bodyTextWidth;
+  }
+
+  .person {
+    margin: lem;
+    margin-bottom: 0;
   }
 </style>

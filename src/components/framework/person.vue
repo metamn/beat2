@@ -69,11 +69,6 @@
     .personAvatar,
     .personName {
       margin-bottom: 0;
-    }
-
-    .personAvatar,
-    .personName,
-    .personTitle {
       margin-right: lem;
     }
 
