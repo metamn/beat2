@@ -2,15 +2,17 @@
   <div :class="$style.person">
     <mv-avatar :class="$style.personAvatar" :avatar="avatar" />
 
-    <mv-link v-if="person.url" :class="$style.personNameWithLink" :url="person.url" :title="person.name">
-      {{ person.name }}
-    </mv-link>
-    <div v-else :class="$style.personName">
-      {{ person.name }}
+    <div :class="$style.personName">
+      <mv-link v-if="person.url" :class="$style.personNameWithLink" :url="person.url" :title="person.name">
+        {{ person.name }}
+      </mv-link>
+      <span v-else :class="$style.personNameWithoutLink">
+        {{ person.name }}
+      </span>
     </div>
 
     <div :class="$style.personTitle">
-      {{ person.title }}
+      <span :class="$style.personTitleText">{{ person.title }}</span>
     </div>
   </div>
 </template>
@@ -44,49 +46,54 @@
 </script>
 
 <style module>
-  @value landscape from './breakpoints.css';
-  @value portrait from './breakpoints.css';
+  @value desktop from './breakpoints.css';
   @value lem from './scale.css';
 
   .person {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center
   }
 
-  @media portrait {
+  .personAvatar,
+  .personName {
+    margin-bottom: calc(lem / 2);
+  }
+
+  @media desktop {
     .person {
-      flex-direction: column;
+      flex-direction: row;
+    }
+
+    .personAvatar,
+    .personName {
+      margin-bottom: 0;
     }
 
     .personAvatar,
     .personName,
-    .personNameWithLink,
     .personTitle {
-      margin-bottom: calc(lem / 2);
+      margin-right: lem;
     }
-  }
-
-  @media landscape {
-    .personAvatar,
-    .personName,
-    .personNameWithLink,
-    .personTitle {
-      margin-right: calc(lem / 2);
-    }
-  }
-
-  .personNameWithLink {
-    composes: linkUnderlined from './text-style.css';
-    composes: large1 from './scale.css';
   }
 
   .personName {
     composes: large1 from './scale.css';
   }
 
+  .personNameWithLink {
+    composes: linkUnderlined from './text-style.css';
+  }
+
   .personTitle {
     composes: default from './colors.css';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .personTitleText {
     composes: lightItalic from './fonts.css';
   }
 </style>

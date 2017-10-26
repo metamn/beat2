@@ -24,33 +24,21 @@
 
 <style module>
   @value bodyTextWidth from './text-style.css';
-  @value laptopAndUp from './breakpoints.css';
-  @value tabletAndUp from './breakpoints.css';
+  @value portrait from './breakpoints.css';
+  @value desktop from './breakpoints.css';
   @value lem from './scale.css';
+  @value white from './colors.css';
 
   .personWithQuote {
+    composes: dottedForPersonWithQuote from './background-images.css';
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
 
-  .blockquote {
-    composes: blockquote from './elements.css';
-    max-width: bodyTextWidth;
-  }
-
-  @media tabletAndUp {
-    .personWithQuote {
-      composes: dotted from './background-images.css';
-    }
-
-    .quote {
-      composes: textSkew from './text-skew.css';
-    }
-  }
-
-  @media laptopAndUp {
+  @media desktop {
     .personWithQuote {
       flex-wrap: nowrap;
     }
@@ -60,9 +48,16 @@
     }
   }
 
-  .person {
-
+  .quote {
+    composes: skewForQuote from './text-skew.css';
   }
 
+  .blockquote {
+    composes: blockquote from './elements.css';
+    max-width: bodyTextWidth;
+  }
 
+  .person {
+    
+  }
 </style>

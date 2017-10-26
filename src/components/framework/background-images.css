@@ -1,3 +1,16 @@
+@value portrait from './breakpoints.css';
+@value white from './colors.css';
+
 .dotted {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAEElEQVQImWNgYGD4z0AHAABlBAEAGUklEQAAAABJRU5ErkJggg==);
+}
+
+.dottedForPersonWithQuote {
+  composes: dotted;
+}
+
+@media portrait {
+  .dottedForPersonWithQuote {
+    background: white;
+  }
 }
