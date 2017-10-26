@@ -1,6 +1,6 @@
 @value lem from './scale.css';
 @value mobileAndUp from './breakpoints.css';
-@value bodyTextWidth: calc(lem * 20);
+@value bodyTextWidth: calc(lem * 17);
 
 .bodyText {
   max-width: bodyTextWidth;

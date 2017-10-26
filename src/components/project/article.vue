@@ -5,7 +5,7 @@
     <mv-article-categories v-if="article.display.includes('categories')" :categories="article.categories"/>
     <mv-article-excerpt v-if="article.display.includes('excerpt') && displayAsThumb" :excerpt="article.excerpt" />
     <mv-article-authors v-if="article.display.includes('authors')" :authors="article.authors"/>
-    <div :class="$style.slot">
+    <div v-if="this.$slots.default" :class="$style.slot">
       <slot></slot>
     </div>
   </article>

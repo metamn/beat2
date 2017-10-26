@@ -76,6 +76,11 @@
     .personTitle {
       margin-right: lem;
     }
+
+    .personTitle {
+      /* Shrink it for a better look */
+      max-width: calc(lem * 3);
+    }
   }
 
   .personName {

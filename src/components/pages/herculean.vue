@@ -1,6 +1,5 @@
 <template lang="html">
-  <mv-article :article="article" :displayAsThumb="displayAsThumb">
-  </mv-article>
+  <mv-article :article="article" :displayAsThumb="displayAsThumb"></mv-article>
 </template>
 
 <script>

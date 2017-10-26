@@ -56,8 +56,4 @@
     composes: blockquote from './elements.css';
     max-width: bodyTextWidth;
   }
-
-  .person {
-    
-  }
 </style>
