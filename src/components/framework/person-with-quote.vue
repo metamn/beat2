@@ -24,12 +24,15 @@
 
 <style module>
   @value bodyTextWidth from './text-style.css';
-  @value portrait from './breakpoints.css';
   @value desktop from './breakpoints.css';
   @value lem from './scale.css';
-  @value white from './colors.css';
 
   .personWithQuote {
+    /**
+     * To have different backgrounds on small and large screens a special component is created.
+     * Media queries cannot contain 'composes' inside just normal css declarations
+     * This is a general idea: compose at component level, here in the parent just include the special cases 
+     */
     composes: dottedForPersonWithQuote from './background-images.css';
 
     display: flex;
