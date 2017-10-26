@@ -1,8 +1,8 @@
 <template lang="html">
   <div :class="$style.person">
-    <mv-avatar :class="$style.personAvatar" :avatar="avatar" />
+    <mv-avatar v-if="display.includes('avatar')" :class="$style.personAvatar" :avatar="avatar" />
 
-    <div :class="$style.personName">
+    <div v-if="display.includes('name')" :class="$style.personName">
       <mv-link v-if="person.url" :class="$style.personNameWithLink" :url="person.url" :title="person.name">
         {{ person.name }}
       </mv-link>
@@ -11,7 +11,7 @@
       </span>
     </div>
 
-    <div :class="$style.personTitle">
+    <div v-if="display.includes('title')" :class="$style.personTitle">
       <span :class="$style.personTitleText">{{ person.title }}</span>
     </div>
   </div>
@@ -28,6 +28,11 @@
     },
     data: function () {
       return {
+        display: [
+          'avatar',
+          'name',
+          'title'
+        ],
         avatar: {
           url: this.person.url,
           title: this.person.name,

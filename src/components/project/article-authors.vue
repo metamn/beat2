@@ -1,9 +1,9 @@
 <template lang="html">
-  <aside class="authors">
+  <aside :class="$style.authors">
     <h3 hidden>Authors</h3>
 
-    <div v-for="author in authors">
-      <mv-person :person="author.person" />
+    <div :class="$style.persons" v-for="author in authors">
+      <mv-person :class="$style.person" :person="author.person" :display="display" />
     </div>
   </aside>
 </template>
@@ -14,7 +14,10 @@
   export default {
     name: 'mv-article-authors',
     props: {
-      authors: Array
+      authors: Array,
+      display: [
+        'avatar'
+      ]
     },
     components: {
       'mv-person': person
@@ -24,6 +27,14 @@
 
 <style module>
   .authors {
+
+  }
+
+  .persons {
+
+  }
+
+  .person {
 
   }
 </style>
