@@ -2,7 +2,7 @@
   <aside :class="$style.authors">
     <h3 hidden>Authors</h3>
 
-    <mv-person v-for="(author, index) in authors" :style="dynamicZIndex(index)" :class="$style.person" :person="author.person" :display="display" />
+    <mv-person v-for="author in authors" :style="setZIndex(1)" :class="$style.person" :person="author.person" :display="display" />
   </aside>
 </template>
 
@@ -18,10 +18,19 @@
         default: () => ['avatar']
       }
     },
-    methods: {
-      dynamicZIndex (index) {
-        return 'z-index: ' + index + ';'
+    data () {
+      return {
+        authorsZIndex: Array.from([this.authors.length], () => 1),
+        z: 2
       }
+    },
+    methods: {
+      setZIndex (index) {
+        return 'z-index: ' + (this.z + index) + ';'
+      }
+    },
+    mounted () {
+      this.z = 10
     },
     components: {
       'mv-person': person
@@ -47,12 +56,4 @@
     left: 50%;
   }
 
-  @keyframes fade {
-    0% {
-      z-index: 1;
-    }
-    100% {
-      z-index: -1;
-    }
-  }
 </style>
