@@ -2,9 +2,7 @@
   <aside :class="$style.authors">
     <h3 hidden>Authors</h3>
 
-    <div :class="$style.persons" v-for="author in authors">
-      <mv-person :class="$style.person" :person="author.person" :display="display" />
-    </div>
+    <mv-person v-for="(author, index) in authors" :style="dynamicZIndex(index)" :class="$style.person" :person="author.person" :display="display" />
   </aside>
 </template>
 
@@ -20,6 +18,11 @@
         default: () => ['avatar']
       }
     },
+    methods: {
+      dynamicZIndex (index) {
+        return 'z-index: ' + index + ';'
+      }
+    },
     components: {
       'mv-person': person
     }
@@ -27,15 +30,29 @@
 </script>
 
 <style module>
+  @value lem from './../framework/scale.css';
+
   .authors {
+    composes: dotted from './../framework/background-images.css';
 
-  }
-
-  .persons {
-
+    display: flex;
+    position: relative;
+    width: calc(lem * 12);
+    height: calc(lem * 6);
   }
 
   .person {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+  }
 
+  @keyframes fade {
+    0% {
+      z-index: 1;
+    }
+    100% {
+      z-index: -1;
+    }
   }
 </style>
