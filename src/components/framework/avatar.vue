@@ -1,8 +1,8 @@
 <template lang="html">
   <div :class="$style.avatar">
     <mv-link :class="$style.avatarLink" :url="avatar.url" :title="avatar.title">
-      <mv-image v-if="avatar.image !== null" :class="$style.avatarImage" :image="avatar.image" />
-      <span v-else :class="$style.avatarInitiale">{{ avatar.initiale }}</span>
+      <mv-image v-if="hasImage" :class="$style.avatarImage" :image="avatar.image" />
+      <span v-else :class="$style.avatarInitiale">{{ initiale }}</span>
     </mv-link>
   </div>
 </template>
@@ -18,7 +18,10 @@
     },
     computed: {
       initiale () {
-        return this.title.charAt(0)
+        return this.avatar.title.charAt(0)
+      },
+      hasImage () {
+        return (this.avatar.image.src && this.avatar.image.src !== '')
       }
     },
     components: {
@@ -47,6 +50,10 @@
 
   .avatarInitiale {
     composes: default from './circle.css';
-    composes: default from './colors.css';
+    composes: inverted from './colors.css';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
