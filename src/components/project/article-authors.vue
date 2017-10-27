@@ -15,9 +15,10 @@
     name: 'mv-article-authors',
     props: {
       authors: Array,
-      display: [
-        'avatar'
-      ]
+      display: {
+        type: Array,
+        default: () => ['avatar']
+      }
     },
     components: {
       'mv-person': person

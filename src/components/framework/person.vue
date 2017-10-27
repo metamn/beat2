@@ -24,15 +24,18 @@
   export default {
     name: 'mv-person',
     props: {
-      person: Object
-    },
-    data: function () {
-      return {
-        display: [
+      person: Object,
+      display: {
+        type: Array,
+        default: () => [
           'avatar',
           'name',
           'title'
-        ],
+        ]
+      }
+    },
+    data: function () {
+      return {
         avatar: {
           url: this.person.url,
           title: this.person.name,
