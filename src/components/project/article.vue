@@ -6,6 +6,7 @@
     <mv-article-excerpt v-if="article.display.includes('excerpt') && displayAsThumb" :excerpt="article.excerpt" />
     <mv-article-authors v-if="article.display.includes('authors')" :authors="article.authors"/>
     <mv-article-person-with-quote v-if="article.display.includes('person-with-quote')" :personWithQuote="article.personWithQuote" />
+    <mv-article-carousel v-if="article.display.includes('carousel')" :carousel="article.carousel" />
     <div v-if="this.$slots.default" :class="$style.slot">
       <slot></slot>
     </div>
@@ -19,6 +20,7 @@
   import articleExcerpt from './article-excerpt'
   import articleAuthors from './article-authors'
   import articlePersonWithQuote from './article-person-with-quote'
+  import articleCarousel from './article-carousel'
 
   export default {
     name: 'mv-article',
@@ -32,7 +34,8 @@
       'mv-article-categories': articleCategories,
       'mv-article-excerpt': articleExcerpt,
       'mv-article-authors': articleAuthors,
-      'mv-article-person-with-quote': articlePersonWithQuote
+      'mv-article-person-with-quote': articlePersonWithQuote,
+      'mv-article-carousel': articleCarousel
     },
     computed: {
       computedClass () {
