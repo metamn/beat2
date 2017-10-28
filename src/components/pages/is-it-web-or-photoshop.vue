@@ -27,56 +27,64 @@
             'categories',
             'carousel'
           ],
-          slides: [
-            {
-              image: {
-                title: 'Mars Maiers',
-                src: '/static/images/marsmaiers.png'
-              }
-            },
-            {
-              image: {
-                title: 'Yale / Paul Rand',
-                src: '/static/images/yale.png'
-              }
-            },
-            {
-              image: {
-                title: 'Bloomberg',
-                src: '/static/images/bloomberg.png'
+          carousel: {
+            slides: [
+              {
+                image: {
+                  title: 'Mars Maiers',
+                  src: '/static/images/marsmaiers_tablet.jpg',
+                  srcset: '/static/images/marsmaiers_tablet.jpg 340w'
+                }
               },
-              link: {
-                url: 'http://www.bloomberg.com/businessweek/design-conference/',
-                type: 'external'
-              }
-            },
-            {
-              image: {
-                title: 'Architetti Arco Alpino',
-                src: '/static/images/arco.png'
+              {
+                image: {
+                  title: 'Yale / Paul Rand',
+                  src: '/static/images/yale_tablet.png',
+                  srcset: '/static/images/yale_tablet.png 340w'
+                }
               },
-              link: {
-                url: 'http://www.architettiarcoalpino.it/',
-                type: 'external'
-              }
-            },
-            {
-              image: {
-                title: 'Holz.re',
-                src: '/static/images/holz.png'
-              }
-            },
-            {
-              image: {
-                title: 'After All Studio',
-                src: '/static/images/afterall.png'
+              {
+                image: {
+                  title: 'Bloomberg',
+                  src: '/static/images/bloomberg_tablet.png',
+                  srcset: '/static/images/bloomberg_tablet.png 340w'
+                },
+                link: {
+                  url: 'http://www.bloomberg.com/businessweek/design-conference/',
+                  type: 'external'
+                }
               },
-              link: {
-                url: 'http://afterallstudio.com/',
-                type: 'external'
+              {
+                image: {
+                  title: 'Architetti Arco Alpino',
+                  src: '/static/images/arco_tablet.png',
+                  srcset: '/static/images/arco_tablet.png 340w'
+                },
+                link: {
+                  url: 'http://www.architettiarcoalpino.it/',
+                  type: 'external'
+                }
+              },
+              {
+                image: {
+                  title: 'Holz.re',
+                  src: '/static/images/holz_tablet.png',
+                  srcset: '/static/images/holz_tablet.png 340w'
+                }
+              },
+              {
+                image: {
+                  title: 'After All Studio',
+                  src: '/static/images/afterall_tablet.png',
+                  srcset: '/static/images/afterall_tablet.png 340w'
+                },
+                link: {
+                  url: 'http://afterallstudio.com/',
+                  type: 'external'
+                }
               }
-            }
-          ]
+            ]
+          }
         }
       }
     },
