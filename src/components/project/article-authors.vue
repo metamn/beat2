@@ -1,13 +1,13 @@
 <template lang="html">
   <aside :class="$style.authors">
     <h3 hidden>Authors</h3>
-
-    <mv-person v-for="author in authors" :style="setZIndex(1)" :class="$style.person" :person="author.person" :display="display" />
+    <mv-person v-for="author in authors" :key="author.id" :class="$style.person" :person="author.person" :display="display" />
   </aside>
 </template>
 
 <script>
   import person from '../framework/person'
+  import {TweenLite} from 'gsap'
 
   export default {
     name: 'mv-article-authors',
@@ -20,17 +20,36 @@
     },
     data () {
       return {
-        authorsZIndex: Array.from([this.authors.length], () => 1),
-        z: 2
+        zIndex: 1
       }
     },
     methods: {
-      setZIndex (index) {
-        return 'z-index: ' + (this.z + index) + ';'
+      resetAvatars () {
+        this.zIndex = 1
+        this.$el.childNodes.forEach((el) => {
+          if (el.style) {
+            el.style.zIndex = '0'
+          }
+        })
+      },
+      showAvatar () {
+        let index = Math.floor((Math.random() * this.authors.length))
+        let el = this.$el.childNodes[index]
+
+        this.zIndex += 1
+        if (this.zIndex > 100) {
+          this.resetAvatars()
+        }
+
+        TweenLite.to(el, 1, {
+          zIndex: this.zIndex,
+          onComplete: this.showAvatar
+        })
       }
     },
     mounted () {
-      this.z = 10
+      this.showAvatar()
+      console.log(this.$el.childNodes[1])
     },
     components: {
       'mv-person': person
@@ -52,6 +71,7 @@
 
   .person {
     position: absolute;
+    z-index: 1;
     top: 45%;
     left: 50%;
   }

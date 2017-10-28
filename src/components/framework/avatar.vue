@@ -33,19 +33,18 @@
 
 <style module>
   @value black from './colors.css';
-
-  .avatar {
-
-  }
-
-  .avatarLink {
-
-  }
+  @value white from './colors.css';
 
   .avatarImage {
     composes: default from './circle.css';
+
+    /* A border makes it smooth */
+    composes: normalAll from './border.css';
+    border-color: white;
+
+    /* if the image is missing do not display it's caption */
     composes: default from './colors.css';
-    color: black; /* if the image is missing do not display it's caption */
+    color: black;
   }
 
   .avatarInitiale {
