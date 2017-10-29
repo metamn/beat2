@@ -8,6 +8,7 @@ import noProblemsFrontend from '@/components/pages/no-more-problems-on-the-front
 import herculean from '@/components/pages/herculean'
 import peopleApart2016 from '@/components/pages/what-some-people-apart-are-up-to-in-2016'
 import isItWebOrPhotoshop from '@/components/pages/is-it-web-or-photoshop'
+import mowFeb2016 from '@/components/pages/masters-of-web-february-2016'
 
 Vue.use(Router)
 
@@ -53,6 +54,11 @@ export default new Router({
       path: '/is-it-web-or-photoshop',
       name: 'isItWebOrPhotoshop',
       component: isItWebOrPhotoshop
+    },
+    {
+      path: '/masters-of-web-february-2016',
+      name: 'mowFeb2016',
+      component: mowFeb2016
     }
   ]
 })

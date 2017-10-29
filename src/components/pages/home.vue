@@ -1,6 +1,7 @@
 <template lang="html">
   <section :class="$style.articles">
     <h3 hidden>Articles</h3>
+    <mv-masters-of-web-february-2016-artwork />
     <mv-what-some-people-apart-are-up-to-in-2016-artwork/>
     <mv-is-it-web-or-photoshop-artwork/>
     <mv-herculean-artwork/>
@@ -19,6 +20,7 @@
   import herculeanArtwork from '../project/herculean-artwork'
   import peopleApart2016Artwork from '../project/what-some-people-apart-are-up-to-in-2016-artwork'
   import isItWebOrPhotoshopArtwork from '../project/is-it-web-or-photoshop-artwork'
+  import mowFeb2016Artwork from '../project/masters-of-web-february-2016-artwork'
 
   export default {
     name: 'mv-home',
@@ -29,7 +31,8 @@
       'mv-no-more-problems-on-the-front-end-artwork': noProblemsFrontendArtwork,
       'mv-herculean-artwork': herculeanArtwork,
       'mv-what-some-people-apart-are-up-to-in-2016-artwork': peopleApart2016Artwork,
-      'mv-is-it-web-or-photoshop-artwork': isItWebOrPhotoshopArtwork
+      'mv-is-it-web-or-photoshop-artwork': isItWebOrPhotoshopArtwork,
+      'mv-masters-of-web-february-2016-artwork': mowFeb2016Artwork
     }
   }
 </script>
